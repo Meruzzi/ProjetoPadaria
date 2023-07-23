@@ -1,0 +1,264 @@
+html {
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #FFB800;
+    width: 100%;
+    height: 50px;
+}
+
+#iconLogo {
+    width: 45px;
+}
+
+#iconMenu {
+    width: 45px;
+}
+
+#iconCart {
+    width: 40px;
+}
+
+#btnNav {
+    cursor: pointer;
+}
+
+#navBar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    background-color: #FFB800;
+}
+
+#inputNav {
+    background-color: black;
+    width: 150px;
+    border-radius: 10px;
+}
+
+#lupaInput {
+    width: 15px;
+    padding-left: 5px;
+}
+
+.navItem {
+    display: none;
+    padding: 10px;
+}
+
+.navItem:hover {
+    background-color: white;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.ativo .navItem {
+    display: block;
+}
+
+
+
+#imgPaoFrances {
+    width: 100vw;
+    height: 25vh;
+}
+
+#cardConteudo {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#cardConteudo p {
+    padding-top: 10px;
+}
+
+#nomeProduto {
+    font-size: 1.8rem;
+}
+
+.conteudoCard {
+    padding-top: 10px;
+}
+
+
+
+
+#cardEscolhaPao {
+    display: flex;
+    width: 100%;
+    height: 80px;
+    color: #FFB800;
+}
+
+#cardEscolhaPao div {
+    margin: 2px;
+    border-radius: 10px;
+}
+
+#paoClaro {
+    background-image: url(imgs/Rectangle\ 5.png);
+    width: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#paoMoreno {
+    background-image: url(imgs/Rectangle\ 6.png);
+    width: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.textoOpcaoPao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 2px 2px #000000;
+    transition: box-shadow .3s;
+}
+
+.textoOpcaoPao:hover {
+    cursor: pointer;
+    box-shadow: 0 0 11px #FFB800;
+}
+
+#btnCompras {
+    padding: 5px;
+}
+
+.btnComprarCss {
+    margin-top: 5px;
+    background-color: #FFB800;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.btnComprarCss:hover {
+    box-shadow: 0 0 11px #FFB800;
+}
+
+#cardOutrosProdutos {
+    padding: 10px;
+}
+
+.outrosProdutos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#outrosProdutosCard {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.imgProdutos {
+    width: 150px;
+    height: 100px;
+    border-radius: 10px;
+}
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #FFB800;
+    width: 100%;
+}
+
+@media (max-width: 500px) {
+    #outrosProdutosCard {
+        flex-direction: column;
+    }
+
+    .produto {
+        padding: 5px;
+    }
+}
+
+
+@media (min-width: 700px) {    
+
+    header {
+        justify-content: space-evenly;
+    }
+
+    nav {
+        background-color: #FFB800;
+        display: flex;
+        justify-content: center;
+    }
+
+    #navBar {
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 70%;
+    }
+
+    .navItem:hover {
+        background-color: white;
+        border-radius: 10px;
+        width: 25%;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    #btnNav {
+        display: none;
+    }
+
+    .navItem {
+        display: block;
+    }
+    
+    main {
+        display: grid;
+        justify-content: center;
+        grid-template-areas: 
+        'imgPaoFrances cardConteudo'
+        'btnCompras btnCompras'
+        'cardOutrosProdutos cardOutrosProdutos';
+    }
+
+    #imgPaoFrances {
+        width: 100%;
+        max-width: 800px;
+        height: 100%;
+        max-height: 350px;
+    }
+
+    #outrosProdutosCard {
+        flex-direction: column;
+    }
+    #btnCompras {
+        grid-area: btnCompras;
+    }
+    
+    #cardOutrosProdutos {
+        grid-area: cardOutrosProdutos;
+    }
+
+    #outrosProdutosCard {
+        flex-direction: row;
+    }
+}
